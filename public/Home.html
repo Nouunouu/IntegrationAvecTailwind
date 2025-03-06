@@ -6,8 +6,11 @@
     <title>HomePage - MangaPal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body class="bg-black text-white flex flex-col min-h-screen overflow-hidden">
+<body class="bg-back text-white flex flex-col min-h-screen overflow-hidden">
 
     <!-- Insertion du Header -->
     <div id="header"></div>
@@ -36,9 +39,11 @@
             </div>
 
             <!-- Bouton Acheter -->
-            <button class="w-[140px] h-[60px] font-semibold text-[16px] uppercase text-white bg-red-700 rounded-md cursor-pointer mt-6 hover:bg-red-800 transition">
-                Acheter
-            </button>
+            <button onclick="window.location.href='product.html';" 
+            class="w-[140px] h-[60px] font-semibold text-[16px] uppercase text-white bg-primary-color rounded-md cursor-pointer mt-6 hover:bg-red-800 transition">
+            Acheter
+        </button>
+        
         </div>
         
     </main>

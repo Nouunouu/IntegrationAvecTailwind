@@ -17,8 +17,8 @@
     <header class="flex items-center justify-between px-8 py-4 border-b border-white">
         <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#A84534]">MangaPal</h1>
         <nav class="flex space-x-6">
-            <a href="#" class="text-primary-color uppercase">Accueil</a>
-            <a href="#" class="text-primary-color uppercase">Figurines</a>
+            <a href="Home.html" class="text-primary-color uppercase">Accueil</a>
+            <a href="product.html" class="text-primary-color uppercase">Figurines</a>
             <a href="#" class="text-primary-color uppercase">Bibliothèque</a>
             <a href="#" class="text-primary-color uppercase">Contact</a>
         </nav>
@@ -32,13 +32,9 @@
             <input type="email" placeholder="Email" class="w-96 p-4 my-4 bg-gray-800 rounded">
             <input type="password" placeholder="Password" class="w-96 p-4 my-4 bg-gray-800 rounded">
             
-            <p  onclick="register()"  class="mt-4">J'ai déjà un compte ? <a href="#" class="custom-red">Se connecter</a></p>
-            <button  onclick="redirectToLogin()" class="w-48 py-2 mt-4 bg-primary-color text-white rounded">Se connecter</button>
-            <script>
-                document.getElementById("redirecter-btn").addEventListener("click", function() {
-                    window.location.href = "seconnecter.html";
-                });
-            </script>
+            <p  class="mt-4">J'ai déjà un compte ? <a href="seconnecter.html" class="text-primary-color">Se connecter</a></p>
+            <button   onclick="window.location.href='Home.html';"   class="w-48 py-2 mt-4 bg-primary-color text-white rounded">Se connecter</button>
+           
         </div>
         
         <div class="w-1/4 ml-8">
@@ -74,10 +70,6 @@
             alert("Compte créé avec succès !");
             window.location.href = "seconnecter.html";
         }
-
-        function redirectToLogin() {
-            window.location.href = "seconnecter.html";
-        }
-    </script>
+    </script>    
 </body>
 </html>

@@ -3,45 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MangaPal</title>
+    <title>Livraison - MangaPal</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body class="relative w-[1440px] h-[1024px] bg-gray-900 m-0">
-    
-    <nav class="flex flex-row justify-between items-center px-10 py-5 relative">
-        <a href="#" class="text-4xl font-bold bg-gradient-to-r from-white to-red-700 bg-clip-text text-transparent">MangaPal</a>
-        <div class="flex space-x-10">
-            <a href="#" class="text-[22px] font-medium uppercase text-[#B34532]">ACCUEIL</a>
-            <a href="#" class="text-[22px] font-medium uppercase text-[#A84534]">FIGURINES</a>
-            <a href="#" class="text-[22px] font-medium uppercase text-[#97352F]">BIBLIOTHÈQUE</a>
-            <a href="#" class="text-[22px] font-medium uppercase text-[#A84534]">CONTACT</a>
-        </div>
-        <div class="absolute w-full border-t border-white top-[122px]"></div>
+<body class="bg-back text-white">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-5 border-b border-white">
+        <div class="text-4xl font-bold bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent">MangaPal</div>
+        <ul class="flex gap-10 list-none">
+            <li><a href="#" class="text-red-600 text-lg">ACCUEIL</a></li>
+            <li><a href="#" class="text-red-600 text-lg">FIGURINES</a></li>
+            <li><a href="#" class="text-red-600 text-lg">BIBLIOTHÈQUE</a></li>
+            <li><a href="#" class="text-red-600 text-lg">CONTACT</a></li>
+        </ul>
     </nav>
-    
-    <div class="absolute w-[591.25px] h-[463.21px] left-[calc(50%-591.25px/2-239.37px)] top-[179px] bg-cover bg-center bg-no-repeat" style="background-image: url('./images/SatoruGojo.jpg');"></div>
-    
-    <div class="absolute w-[443px] left-[75%] top-[45%] transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-5">
-        <div class="text-[#2E51A2] text-[70px] font-medium leading-tight writing-mode-vertical-rl text-orientation-upright">鬼滅の刃</div>
-        <div class="text-[#2E51A2] text-center">
-            <h1 class="text-[48px] font-bold">50%<br>Demon Discount</h1>
-            <p class="text-[30px] font-medium leading-[35px]">Bienvenue Sur MangaPal, Votre<br>Destination Ultime<br>Pour Tous Les<br>Produits D'anime !</p>
+
+    <!-- Page Livraison -->
+    <section class="text-center py-12">
+        <p class="text-orange-color text-sm mb-5">accueil/livraison</p>
+        <div class="flex justify-center mb-8">
+            <img src="./images/map.jpg" alt="Carte de livraison" class="w-full max-w-lg rounded-lg">
         </div>
-    </div>
-    
-    <button class="w-[140px] h-[60px] font-semibold text-[16px] uppercase text-white bg-red-700 rounded-md cursor-pointer block mx-auto relative mt-[750px] text-center hover:bg-red-800 transition">Acheter</button>
-    
-    <footer class="absolute bottom-0 w-full bg-gray-900 py-4 text-center">
-        <div class="w-full border-t border-white"></div>
-        <div class="flex justify-between items-center px-12 py-4">
-            <small class="text-white text-[12px]">COPYRIGHT @MANGAPAL 2025</small>
-            <div class="flex gap-5">
-                <a href="#"><img src="./public/facebook.png" class="w-[30px] h-[30px] rounded-full p-1 bg-gray-900 hover:scale-110 transition" alt="Facebook"></a>
-                <a href="#"><img src="./public/instagram.png" class="w-[30px] h-[30px] rounded-full p-1 bg-gray-900 hover:scale-110 transition" alt="Instagram"></a>
-                <a href="#"><img src="./public/twitter.png" class="w-[30px] h-[30px] rounded-full p-1 bg-gray-900 hover:scale-110 transition" alt="Twitter"></a>
+        <div class="bg-back-900 p-6 rounded-lg max-w-lg mx-auto">
+            <h2 class="text-2xl mb-4">Votre Livreur</h2>
+            <div class="flex items-center gap-5">
+                <img src="./images/Livreur.jpg" alt="Photo du livreur" class="w-20 h-20 rounded-full">
+                <div class="text-left">
+                    <p><strong>Nom :</strong> Samir Samir</p>
+                    <p><strong>Téléphone :</strong> +21621567890</p>
+                    <p><strong>Notification :</strong> Dans 30 minutes</p>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex justify-between items-center p-5 border-t border-white text-xs bg-back">
+        <p>COPYRIGHT ©MANGAPAL 2025</p>
+        <div class="flex gap-5">
+            <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </footer>
-    
 </body>
 </html>
