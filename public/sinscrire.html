@@ -7,11 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ajout de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        .custom-red { color: #A84534; }
-        .custom-bg-red { background-color: #A84534; }
         .custom-border-red { border-color: #A84534; }
     </style>
 </head>
@@ -19,24 +17,28 @@
     <header class="flex items-center justify-between px-8 py-4 border-b border-white">
         <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#A84534]">MangaPal</h1>
         <nav class="flex space-x-6">
-            <a href="#" class="custom-red uppercase">Accueil</a>
-            <a href="#" class="custom-red uppercase">Figurines</a>
-            <a href="#" class="custom-red uppercase">Bibliothèque</a>
-            <a href="#" class="custom-red uppercase">Contact</a>
+            <a href="#" class="text-primary-color uppercase">Accueil</a>
+            <a href="#" class="text-primary-color uppercase">Figurines</a>
+            <a href="#" class="text-primary-color uppercase">Bibliothèque</a>
+            <a href="#" class="text-primary-color uppercase">Contact</a>
         </nav>
-        <button class="px-6 py-2 border-2 custom-border-red rounded text-white">Se connecter</button>
     </header>
     
     <main class="flex flex-row items-start justify-between px-8 py-16">
         <div class="flex flex-col w-1/2">
             <h2 class="text-lg font-semibold">Bienvenue !!</h2>
-            <h3 class="text-5xl font-semibold custom-red">Se Connecter</h3>
+            <h3 class="text-5xl font-semibold text-primary-color">S'inscrire</h3>
             
             <input type="email" placeholder="Email" class="w-96 p-4 my-4 bg-gray-800 rounded">
             <input type="password" placeholder="Password" class="w-96 p-4 my-4 bg-gray-800 rounded">
             
-            <p class="mt-4">Je n’ai pas de compte? <a href="#" class="custom-red">S’inscrire</a></p>
-            <button class="w-48 py-2 mt-4 custom-bg-red text-white rounded">Se connecter</button>
+            <p  onclick="register()"  class="mt-4">J'ai déjà un compte ? <a href="#" class="custom-red">Se connecter</a></p>
+            <button  onclick="redirectToLogin()" class="w-48 py-2 mt-4 bg-primary-color text-white rounded">Se connecter</button>
+            <script>
+                document.getElementById("redirecter-btn").addEventListener("click", function() {
+                    window.location.href = "seconnecter.html";
+                });
+            </script>
         </div>
         
         <div class="w-1/4 ml-8">
@@ -55,5 +57,27 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        function register() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email === "" || password === "") {
+                alert("Veuillez remplir tous les champs !");
+                return;
+            }
+
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", password);
+            alert("Compte créé avec succès !");
+            window.location.href = "seconnecter.html";
+        }
+
+        function redirectToLogin() {
+            window.location.href = "seconnecter.html";
+        }
+    </script>
 </body>
 </html>

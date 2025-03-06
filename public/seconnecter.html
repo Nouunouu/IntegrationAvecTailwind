@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ajout de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <style>
         .custom-red { color: #A84534; }
@@ -24,18 +24,20 @@
             <a href="#" class="custom-red uppercase">Bibliothèque</a>
             <a href="#" class="custom-red uppercase">Contact</a>
         </nav>
+        <button class="px-6 py-2 border-2 custom-border-red rounded text-white">Se connecter</button>
     </header>
     
     <main class="flex flex-row items-start justify-between px-8 py-16">
         <div class="flex flex-col w-1/2">
             <h2 class="text-lg font-semibold">Bienvenue !!</h2>
-            <h3 class="text-5xl font-semibold custom-red">S'inscrire</h3>
+            <h3 class="text-5xl font-semibold custom-red">Se Connecter</h3>
             
             <input type="email" placeholder="Email" class="w-96 p-4 my-4 bg-gray-800 rounded">
             <input type="password" placeholder="Password" class="w-96 p-4 my-4 bg-gray-800 rounded">
             
-            <p class="mt-4">J'ai déjà un compte ? <a href="#" class="custom-red">Se connecter</a></p>
-            <button class="w-48 py-2 mt-4 custom-bg-red text-white rounded">Se connecter</button>
+            <p  href="sinscrire.html" class="mt-4">Je n’ai pas de compte? <a href="#" class="custom-red">S’inscrire</a></p>
+            <button onclick="login()" class="w-48 py-2 mt-4 custom-bg-red text-white rounded">Se connecter</button>
+         
         </div>
         
         <div class="w-1/4 ml-8">
@@ -54,5 +56,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function login() {
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+
+            const savedEmail = localStorage.getItem("userEmail");
+            const savedPassword = localStorage.getItem("userPassword");
+
+            if (email === savedEmail && password === savedPassword) {
+                alert("Connexion réussie !");
+                window.location.href = "ListProduits.html";
+            } else {
+                alert("Email ou mot de passe incorrect !");
+            }
+        }
+    </script>
 </body>
 </html>

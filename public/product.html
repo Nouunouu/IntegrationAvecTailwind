@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage - MangaPal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex flex-col min-h-screen overflow-hidden">
+  <div id="header"></div>
+
+    <!-- Contenu principal -->
+    <main class="flex flex-col md:flex-row justify-center items-center flex-1 px-6 py-10 md:space-x-16">
+        
+        <!-- Image -->
+        <div class="w-full md:w-1/2 flex justify-center">
+            <img src="./images/SatoruGojo.jpg" alt="Satoru Gojo" class="w-[500px] md:w-[591px] rounded-lg shadow-lg">
+        </div>
+
+        <!-- Texte à droite -->
+        <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+            <!-- Texte vertical et slogan -->
+            <div class="flex items-center gap-5">
+                <div class="text-[#2E51A2] text-[50px] font-medium vertical-text">
+                    鬼滅の刃
+                </div>
+                <div class="text-[#2E51A2]">
+                    <h1 class="text-[40px] font-bold">50%<br>Demon Discount</h1>
+                    <p class="text-[20px] md:text-[24px] font-medium leading-[35px]">
+                        Bienvenue Sur MangaPal, Votre<br>Destination Ultime<br>Pour Tous Les<br>Produits D'anime !
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bouton Découvrir -->
+            <button class="w-[140px] h-[50px] font-semibold text-[14px] uppercase text-white bg-[#A84534] rounded-md cursor-pointer mt-6 hover:bg-red-800 transition">
+                DÉCOUVRIR
+            </button>
+        </div>
+        
+    </main>
+    <div id="footer"></div>
+
+    <script>
+        // Fonction pour inclure un fichier HTML dans un élément
+        function includeHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(error => console.error(`Erreur de chargement du fichier ${file}:`, error));
+        }
+
+        includeHTML("header", "Header.html");
+        includeHTML("footer", "Footer.html");
+
+    </script>
+
+</body>
+</html>

@@ -3,97 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MangaPai - Livraison</title>
+    <title>MangaPal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-
-   <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
-
 </head>
-<body class="bg-back text-white">
-
-    <!-- Header -->
-    <div id="header"></div>
-
-
-    <!-- Secondary Navigation -->
-    <div class="bg-gray-900 text-gray-400 py-3 px-6 border-b border-gray-800">
-        <div class="container mx-auto flex justify-between">
-            <span>accueil/figurines/new</span>
-            <ul class="flex space-x-4 text-red-600">
-                <li><a href="#" class="hover:text-white">VENTE</a></li>
-                <li><a href="#" class="hover:text-white">RECOMMANDÉ</a></li>
-                <li><a href="#" class="hover:text-white">NOUVEAU</a></li>
-                <li><a href="#" class="hover:text-white">ACCESSOIRE</a></li>
-            </ul>
+<body class="relative w-[1440px] h-[1024px] bg-gray-900 m-0">
+    
+    <nav class="flex flex-row justify-between items-center px-10 py-5 relative">
+        <a href="#" class="text-4xl font-bold bg-gradient-to-r from-white to-red-700 bg-clip-text text-transparent">MangaPal</a>
+        <div class="flex space-x-10">
+            <a href="#" class="text-[22px] font-medium uppercase text-[#B34532]">ACCUEIL</a>
+            <a href="#" class="text-[22px] font-medium uppercase text-[#A84534]">FIGURINES</a>
+            <a href="#" class="text-[22px] font-medium uppercase text-[#97352F]">BIBLIOTHÈQUE</a>
+            <a href="#" class="text-[22px] font-medium uppercase text-[#A84534]">CONTACT</a>
+        </div>
+        <div class="absolute w-full border-t border-white top-[122px]"></div>
+    </nav>
+    
+    <div class="absolute w-[591.25px] h-[463.21px] left-[calc(50%-591.25px/2-239.37px)] top-[179px] bg-cover bg-center bg-no-repeat" style="background-image: url('./images/SatoruGojo.jpg');"></div>
+    
+    <div class="absolute w-[443px] left-[75%] top-[45%] transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-5">
+        <div class="text-[#2E51A2] text-[70px] font-medium leading-tight writing-mode-vertical-rl text-orientation-upright">鬼滅の刃</div>
+        <div class="text-[#2E51A2] text-center">
+            <h1 class="text-[48px] font-bold">50%<br>Demon Discount</h1>
+            <p class="text-[30px] font-medium leading-[35px]">Bienvenue Sur MangaPal, Votre<br>Destination Ultime<br>Pour Tous Les<br>Produits D'anime !</p>
         </div>
     </div>
-
-    <!-- Product Container -->
-    <main class="container mx-auto py-8 px-4 grid gap-8 grid-cols-1 lg:grid-cols-2">
-        
-        <!-- Product Card 1 -->
-        <div class="product-card flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
-            <img src="./images/figu.webp" alt="Product Image" class="w-full md:w-1/3 object-cover">
-            <div class="p-6 flex-grow">
-                <h3 class="text-white text-xl font-semibold">Mon hero Academie</h3>
-                <h4 class="text-gray-400 text-md">Katsuki Bakugo Swacchao</h4>
-                <p class="price text-red-600 text-xl font-bold mt-2">39.99 DT</p>
-                <p class="text-gray-500">Art. N°: 54637253</p>
-                <p class="text-gray-500">Couleur: Mint</p>
-                <p class="text-gray-500">Taille: 21x45</p>
-                <p class="text-gray-500">Total: 39.99</p>
-
-                <div class="actions flex items-center justify-start mt-4 space-x-4">
-                    <button class="favorite text-red-600 text-2xl">❤</button>
-                    <select class="bg-gray-700 text-white rounded px-2 py-1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </div>
+    
+    <button class="w-[140px] h-[60px] font-semibold text-[16px] uppercase text-white bg-red-700 rounded-md cursor-pointer block mx-auto relative mt-[750px] text-center hover:bg-red-800 transition">Acheter</button>
+    
+    <footer class="absolute bottom-0 w-full bg-gray-900 py-4 text-center">
+        <div class="w-full border-t border-white"></div>
+        <div class="flex justify-between items-center px-12 py-4">
+            <small class="text-white text-[12px]">COPYRIGHT @MANGAPAL 2025</small>
+            <div class="flex gap-5">
+                <a href="#"><img src="./public/facebook.png" class="w-[30px] h-[30px] rounded-full p-1 bg-gray-900 hover:scale-110 transition" alt="Facebook"></a>
+                <a href="#"><img src="./public/instagram.png" class="w-[30px] h-[30px] rounded-full p-1 bg-gray-900 hover:scale-110 transition" alt="Instagram"></a>
+                <a href="#"><img src="./public/twitter.png" class="w-[30px] h-[30px] rounded-full p-1 bg-gray-900 hover:scale-110 transition" alt="Twitter"></a>
             </div>
-            <button class="delete text-red-600 text-3xl absolute top-4 right-4">×</button>
         </div>
-
-        <!-- Product Card 2 -->
-        <div class="product-card flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
-            <img src="./images/figur.webp" alt="Product Image" class="w-full md:w-1/3 object-cover">
-            <div class="p-6 flex-grow">
-                <h3 class="text-white text-xl font-semibold">Mon hero</h3>
-                <h4 class="text-gray-400 text-md">Katsuki Bakugo Swacchao</h4>
-                <p class="price text-red-600 text-xl font-bold mt-2">42.99 DT</p>
-                <p class="text-gray-500">Art. N°: 54633464</p>
-                <p class="text-gray-500">Couleur: Beige</p>
-                <p class="text-gray-500">Taille: 45x64</p>
-                <p class="text-gray-500">Total: 42.99</p>
-
-                <div class="actions flex items-center justify-start mt-4 space-x-4">
-                    <button class="favorite text-red-600 text-2xl">❤</button>
-                    <select class="bg-gray-700 text-white rounded px-2 py-1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </div>
-            </div>
-            <button class="delete text-red-600 text-3xl absolute top-4 right-4">×</button>
-        </div>
-    </main>
-
-    <!-- Buttons -->
-    <div class="container mx-auto flex justify-center space-x-4 mt-8">
-        <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700">LIVRER</button>
-        <button class="border border-red-600 text-red-600 px-6 py-2 rounded-md hover:text-white hover:bg-red-600">RETOUR</button>
-    </div>
-
-<include file="Header.html"></include>
-
+    </footer>
+    
+</body>
 </html>

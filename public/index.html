@@ -3,52 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraison - MangaPal</title>
+    <title>MangaPal</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ajout de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .custom-red { color: #A84534; }
+        .custom-bg-red { background-color: #A84534; }
+        .custom-border-red { border-color: #A84534; }
+    </style>
 </head>
-<body class="bg-black text-white">
-
-    <!-- Insertion du Header -->
-    <div id="header"></div>
-
-    <!-- Page Livraison -->
-    <section class="text-center py-12">
-        <p class="text-red-600 text-sm mb-5">accueil/livraison</p>
-        <div class="flex justify-center mb-8">
-            <img src="/images/map.jpg" alt="Carte de livraison" class="w-full max-w-lg rounded-lg">
+<body class="bg-back text-white font-[Poppins]">
+    <header class="flex items-center justify-between px-8 py-4 border-b border-white">
+        <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#A84534]">MangaPal</h1>
+        <nav class="flex space-x-6">
+            <a href="#" class="custom-red uppercase">Accueil</a>
+            <a href="#" class="custom-red uppercase">Figurines</a>
+            <a href="#" class="custom-red uppercase">Bibliothèque</a>
+            <a href="#" class="custom-red uppercase">Contact</a>
+        </nav>
+    </header>
+    
+    <main class="flex flex-row items-start justify-between px-8 py-16">
+        <div class="flex flex-col w-1/2">
+            <h2 class="text-lg font-semibold">Bienvenue !!</h2>
+            <h3 class="text-5xl font-semibold custom-red">S'inscrire</h3>
+            
+            <input type="email" placeholder="Email" class="w-96 p-4 my-4 bg-gray-800 rounded">
+            <input type="password" placeholder="Password" class="w-96 p-4 my-4 bg-gray-800 rounded">
+            
+            <p class="mt-4">J'ai déjà un compte ? <a href="#" class="custom-red">Se connecter</a></p>
+            <button class="w-48 py-2 mt-4 custom-bg-red text-white rounded">Se connecter</button>
         </div>
-        <div class="bg-gray-900 p-6 rounded-lg max-w-lg mx-auto">
-            <h2 class="text-2xl mb-4">Votre Livreur</h2>
-            <div class="flex items-center gap-5">
-                <img src="/images/Livreur.jpg" alt="Photo du livreur" class="w-20 h-20 rounded-full">
-                <div class="text-left">
-                    <p><strong>Nom :</strong> Samir Samir</p>
-                    <p><strong>Téléphone :</strong> +21621567890</p>
-                    <p><strong>Notification :</strong> Dans 30 minutes</p>
-                </div>
+        
+        <div class="w-1/4 ml-8">
+            <img src="images/1.png" alt="Illustration MangaPal" class="w-4/5 mx-auto rounded-lg shadow-lg">
+        </div>
+    </main>
+    
+    <footer class="mt-16 border-t border-white py-4 px-8">
+        <div class="flex justify-between items-center">
+            <p class="text-white">COPYRIGHT @MANGAPAL 2025</p>
+            <div class="flex space-x-6">
+                <!-- Icônes des réseaux sociaux -->
+                <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-    </section>
-
-    <!-- Insertion du Footer -->
-    <div id="footer"></div>
-
-    <script>
-        // Fonction pour inclure un fichier HTML dans un élément
-        function includeHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                })
-                .catch(error => console.error(`Erreur de chargement du fichier ${file}:`, error));
-        }
-
-        includeHTML("header", "Header.html");
-        includeHTML("footer", "Footer.html");
-
-    </script>
-
+    </footer>
 </body>
 </html>
