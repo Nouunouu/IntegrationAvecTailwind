@@ -10,6 +10,7 @@ module.exports = {
         "back": "#171717",
         "orange-color":"#B34532",
         "Bleu":"#2E51A2",
+        "ahmer":"#A84534"
     },
   },
   plugins: [],
