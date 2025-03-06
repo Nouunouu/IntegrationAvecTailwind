@@ -6,89 +6,84 @@
     <title>Livraison - MangaPal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
-<body class="bg-back text-white">
+<body class="bg-black text-white">
 
     <!-- Insertion du Header -->
     <div id="header"></div>
 
-    <!-- Page Livraison -->
-    <section class="text-center py-12">
-        <div class="bg-gray-900 text-gray-400 py-3 px-6 border-b border-gray-800">
-            <div class="container mx-auto flex justify-between">
-                <span>accueil/figurines/new</span>
-                <ul class="flex space-x-4 text-red-600">
-                    <li><a href="#" class="hover:text-white">VENTE</a></li>
-                    <li><a href="#" class="hover:text-white">RECOMMANDÉ</a></li>
-                    <li><a href="#" class="hover:text-white">NOUVEAU</a></li>
-                    <li><a href="#" class="hover:text-white">ACCESSOIRE</a></li>
-                </ul>
-            </div>
-        </div>
-    
-        <!-- Product Container -->
-        <main class="container mx-auto py-8 px-4 grid gap-8 grid-cols-1 lg:grid-cols-2">
-            
-            <!-- Product Card 1 -->
-            <div class="product-card flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
-                <img src="./images/figu.webp" alt="Product Image" class="w-full md:w-1/3 object-cover">
-                <div class="p-6 flex-grow">
-                    <h3 class="text-white text-xl font-semibold">Mon hero Academie</h3>
-                    <h4 class="text-gray-400 text-md">Katsuki Bakugo Swacchao</h4>
-                    <p class="price text-red-600 text-xl font-bold mt-2">39.99 DT</p>
-                    <p class="text-gray-500">Art. N°: 54637253</p>
-                    <p class="text-gray-500">Couleur: Mint</p>
-                    <p class="text-gray-500">Taille: 21x45</p>
-                    <p class="text-gray-500">Total: 39.99</p>
-    
-                    <div class="actions flex items-center justify-start mt-4 space-x-4">
-                        <button class="favorite text-red-600 text-2xl">❤</button>
-                        <select class="bg-gray-700 text-white rounded px-2 py-1">
+     <!-- Contenu principal -->
+     <main class="flex flex-col items-center py-8 space-y-8 px-6 md:px-20">
+        <!-- FIGURINES LIST -->
+        <div class="w-full max-w-4xl space-y-8">
+            <!-- Figurine 1 -->
+            <div class="flex flex-col md:flex-row bg-gray-900 p-4 rounded-lg shadow-lg">
+                <img src="images/figur.webp" alt="Katsuki Bakugo" class="w-40 h-auto rounded-lg object-cover mx-auto md:mx-0">
+                <div class="flex-1 ml-6 text-left">
+                    <h3 class="text-lg font-semibold">Mon hero Academie</h3>
+                    <p class="text-xl font-bold">Katsuki Bakugo Swacchao</p>
+                    <p class="text-lg text-primary-color font-semibold mt-2">39.99 DT</p>
+                    <div class="grid grid-cols-2 gap-4 text-sm text-gray-400 mt-2">
+                        <p><strong>Art. N:</strong> 54637253</p>
+                        <p><strong>Taille:</strong> 21x45</p>
+                        <p><strong>Couleur:</strong> Mint</p>
+                        <p><strong>Total:</strong> 39.99</p>
+                    </div>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <button class="border border-gray-500 p-2 rounded text-gray-300 hover:bg-gray-700">
+                            ❤️
+                        </button>
+                        <select class="bg-gray-800 text-white border border-gray-600 p-2 rounded">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
-                            <option>4</option>
                         </select>
                     </div>
                 </div>
-                <button class="delete text-red-600 text-3xl absolute top-4 right-4">×</button>
+                <button class="text-gray-400 hover:text-red-500 text-xl ml-auto">✖</button>
             </div>
-    
-            <!-- Product Card 2 -->
-            <div class="product-card flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
-                <img src="./images/figur.webp" alt="Product Image" class="w-full md:w-1/3 object-cover">
-                <div class="p-6 flex-grow">
-                    <h3 class="text-white text-xl font-semibold">Mon hero</h3>
-                    <h4 class="text-gray-400 text-md">Katsuki Bakugo Swacchao</h4>
-                    <p class="price text-red-600 text-xl font-bold mt-2">42.99 DT</p>
-                    <p class="text-gray-500">Art. N°: 54633464</p>
-                    <p class="text-gray-500">Couleur: Beige</p>
-                    <p class="text-gray-500">Taille: 45x64</p>
-                    <p class="text-gray-500">Total: 42.99</p>
-    
-                    <div class="actions flex items-center justify-start mt-4 space-x-4">
-                        <button class="favorite text-red-600 text-2xl">❤</button>
-                        <select class="bg-gray-700 text-white rounded px-2 py-1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="delete text-red-600 text-3xl absolute top-4 right-4">×</button>
-            </div>
-        </main>
-    
-        <!-- Buttons -->
-        <div class="container mx-auto flex justify-center space-x-4 mt-8">
-            <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700">LIVRER</button>
-            <button class="border border-red-600 text-red-600 px-6 py-2 rounded-md hover:text-white hover:bg-red-600">RETOUR</button>
-        </div>
-    </section>
 
+            <!-- Figurine 2 -->
+            <div class="flex flex-col md:flex-row bg-gray-900 p-4 rounded-lg shadow-lg">
+                <img src="images/figu.webp" alt="Katsuki Bakugo" class="w-40 h-auto rounded-lg object-cover mx-auto md:mx-0">
+                <div class="flex-1 ml-6 text-left">
+                    <h3 class="text-lg font-semibold">Mon hero</h3>
+                    <p class="text-xl font-bold">Katsuki Bakugo Swacchao</p>
+                    <p class="text-lg text-primary-color font-semibold mt-2">42.99 DT</p>
+                    <div class="grid grid-cols-2 gap-4 text-sm text-gray-400 mt-2">
+                        <p><strong>Art. N:</strong> 54633464</p>
+                        <p><strong>Taille:</strong> 45x64</p>
+                        <p><strong>Couleur:</strong> Beige</p>
+                        <p><strong>Total:</strong> 42.99</p>
+                    </div>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <button class="border border-gray-500 p-2 rounded text-gray-300 hover:bg-gray-700">
+                            ❤️
+                        </button>
+                        <select class="bg-gray-800 text-white border border-gray-600 p-2 rounded">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="text-gray-400 hover:text-red-500 text-xl ml-auto">✖</button>
+            </div>
+        </div>
+
+        <!-- BOUTONS -->
+        <div class="flex space-x-4">
+            <button class="bg-primary-color text-white py-2 px-6 rounded border border-orange-color hover:bg-ahmer">
+                LIVRER
+            </button>
+            <button class="border border-primary-color text-primary-color py-2 px-6 rounded hover:bg-primary-color hover:text-white">
+                RETOUR
+            </button>
+        </div>
+    </main>
     <!-- Insertion du Footer -->
     <div id="footer"></div>
 
