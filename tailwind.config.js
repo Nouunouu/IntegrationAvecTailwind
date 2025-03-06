@@ -14,6 +14,9 @@ module.exports = {
         "Bleu":"#2E51A2",
         "ahmer":"#A84534",
         "blanccc":"#ffffff",
+        "gray-dark": "#1f2937",   // Ajout d'un gris foncé pour le fond des cartes
+        "gray-light": "#4b5563",  // Gris clair pour le texte
+        "gray-border": "#6b7280", // Bordure grise
     },
   },
   plugins: [],
