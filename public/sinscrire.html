@@ -13,16 +13,28 @@
         .custom-border-red { border-color: #A84534; }
     </style>
 </head>
-<body class="bg-back text-white font-[Poppins]">
-  
+<body class="bg-back text-white ">
+    <header class="flex items-center justify-between px-8 py-4 border-b border-white">
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-primary-color via-blanccc to-primary-color bg-clip-text text-transparent">MangaPal</h1>
+        <nav class="flex space-x-6">
+            <a href="Home.html" class="text-primary-color custom-red uppercase">Accueil</a>
+            <a href="productSansLogin.html" class="text-primary-color custom-red uppercase">Figurines</a>
+            <a href="#" class=" text-primary-color custom-red uppercase">Bibliothèque</a>
+            <a href="#" class=" text-primary-color custom-red uppercase">Contact</a>
+        </nav>
+        <button class="px-6 py-2 border-2 custom-border-red rounded text-white">Se connecter</button>
+    </header>
     
     <main class="flex flex-row items-start justify-between px-8 py-16">
         <div class="flex flex-col w-1/2">
             <h2 class="text-lg font-semibold">Bienvenue !!</h2>
             <h3 class="text-5xl font-semibold text-primary-color">S'inscrire</h3>
-            
-            <input type="email" placeholder="Email" class="w-96 p-4 my-4 bg-gray-800 rounded">
-            <input type="password" placeholder="Password" class="w-96 p-4 my-4 bg-gray-800 rounded">
+            <p>Email</p>            
+
+            <input type="email" placeholder="test@gmail.com" class="w-96 p-4 my-4 bg-blaccc rounded">
+            <p>Mot de passe </p>            
+
+            <input type="password" placeholder="***********" class="w-96 p-4 my-4 bg-blaccc rounded">
             
             <p  class="mt-4">J'ai déjà un compte ? <a href="seconnecter.html" class="text-primary-color">Se connecter</a></p>
             <button   onclick="window.location.href='Home.html';"   class="w-48 py-2 mt-4 bg-primary-color text-white rounded">Se connecter</button>
@@ -36,6 +48,18 @@
     
    
 
+    
+    <footer class="mt-16 border-t border-white py-4 px-8" >
+        <div class="flex justify-between items-center">
+            <p class="text-white">COPYRIGHT @MANGAPAL 2025</p>
+            <div class="flex space-x-6">
+                <!-- Icônes des réseaux sociaux -->
+                <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-white text-lg hover:text-red-600"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function register() {
