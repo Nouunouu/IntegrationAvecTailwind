@@ -5,5 +5,9 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3"
-  }
+  },
+  "scripts": {
+ "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify",
+  "postbuild": "npm run build"
+}
 }
