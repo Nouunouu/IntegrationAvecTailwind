@@ -1,6 +1,11 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/public/$1" }
-    ]
+      { "source": "/(.*)", "destination": "/public/$1" },
+        { "source": "/header.html", "destination": "/public/header.html" },
+        { "source": "/footer.html", "destination": "/public/footer.html" },
+        { "source": "/images/(.*)", "destination": "/public/images/$1" }
+      ]
+    
+
   }
   
