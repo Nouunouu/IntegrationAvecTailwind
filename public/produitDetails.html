@@ -6,53 +6,72 @@
     <title>MangaPal - Figurine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-<body class="bg-back text-white font-['Poppins',sans-serif]">
-    <header>
-        <div class="flex justify-between items-center p-5 border-b border-white">
-            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-[#A84534]">MangaPal</h1>
-            <nav>
-                <ul class="flex gap-10">
-                    <li><a href="Home.html" class="text-[#A84534] text-lg">ACCUEIL</a></li>
-                    <li><a href="product.html" class="text-[#A84534] text-lg">FIGURINES</a></li>
-                    <li><a href="#" class="text-[#A84534] text-lg">BIBLIOTHÈQUE</a></li>
-                    <li><a href="#" class="text-[#A84534] text-lg">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <div class="flex items-center justify-center gap-12 p-12 relative">
-            <i class="fa-solid fa-heart text-red-600 text-3xl absolute top-12 right-5 cursor-pointer transition-transform duration-300 hover:scale-110"></i>
-            <img src="external/download21214-y89e-300h.png" alt="Katsuki Bakugo" class="w-[389px] h-[539px] object-cover rounded-lg">
-            <div class="max-w-md">
+<body class="bg-back text-white font-['Poppins',sans-serif]">
+
+    <!-- Header -->
+    <nav class="flex items-center justify-between px-10 py-4 border-b border-white bg-back">
+        <!-- Logo -->
+        <div class="text-4xl font-bold bg-gradient-to-r from-primary-color via-blanccc to-primary-color bg-clip-text text-transparent">
+            MangaPal
+        </div>
+        
+        
+        <!-- Navigation -->
+        <ul class="flex gap-10 list-none">
+            <li><a href="Home.html" class="text-primary-color uppercase hover:text-white transition">ACCUEIL</a></li>
+            <li><a href="product.html" class="text-primary-color uppercase hover:text-white transition">FIGURINES</a></li>
+            <li><a href="#" class="text-primary-color uppercase hover:text-white transition">BIBLIOTHÈQUE</a></li>
+            <li><a href="#" class="text-primary-color uppercase hover:text-white transition">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row items-center gap-8 relative">
+            <!-- Bouton Favori -->
+            <i class="fa-solid fa-heart text-red-600 text-3xl absolute top-5 right-5 cursor-pointer transition-transform duration-300 hover:scale-110"></i>
+
+            <!-- Image Produit -->
+            <img src="external/download21214-y89e-300h.png" alt="Katsuki Bakugo"
+                class="w-full md:w-1/2 lg:w-[389px] h-auto object-cover rounded-lg">
+
+            <!-- Détails du Produit -->
+            <div class="text-center md:text-left max-w-lg">
                 <h2 class="text-2xl font-bold">Nendoroid Tanjiro Kamado</h2>
                 <h3 class="text-xl mb-5">Katsuki Bakugo Swacchao Watch</h3>
                 <p><strong>GOODSMILE</strong> TY12562, Cranberry, 9 cm</p>
                 <p>Marque : Good Smile Company</p>
                 <p>Thème : Films et Séries</p>
-                <p  class="text-primary-color"> 48.99DT</p>
+                <p class="text-primary-color text-2xl font-semibold mt-3">48.99 DT</p>
 
-                <div class="flex gap-5 mt-5">
-                    <button class="w-[203px] h-[50px] bg-[#171717] border border-[#A84534] text-white text-lg transition duration-300 hover:bg-[#A84534]">Acheter</button>
-                    <button onclick="window.location.href='ListProduits.html';" class="w-[203px] h-[50px] bg-[#171717] border border-[#A84534] text-white text-lg transition duration-300 hover:bg-[#A84534]">Ajouter au panier</button>
+                <!-- Boutons -->
+                <div class="flex flex-col md:flex-row justify-center md:justify-start gap-4 mt-5">
+                    <button class="w-full md:w-[203px] h-[50px] bg-[#171717] border border-[#A84534] text-white text-lg transition duration-300 hover:bg-[#A84534]">
+                        Acheter
+                    </button>
+                    <button onclick="window.location.href='ListProduits.html';"
+                        class="w-full md:w-[203px] h-[50px] bg-[#171717] border border-[#A84534] text-white text-lg transition duration-300 hover:bg-[#A84534]">
+                        Ajouter au panier
+                    </button>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="flex justify-between items-center p-5 border-t border-white bg-[#111] text-sm">
-        <p>&copy; 2025 MangaPal</p>
-        <div class="flex gap-4">
-            <a href="#" class="text-white text-lg transition duration-300 hover:text-[#A84534]"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="text-white text-lg transition duration-300 hover:text-[#A84534]"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" class="text-white text-lg transition duration-300 hover:text-[#A84534]"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="text-white text-lg transition duration-300 hover:text-[#A84534]"><i class="fa-brands fa-youtube"></i></a>
+    <!-- Footer -->
+    <footer class="bg-back border-t border-blanccc text-center p-4">
+        <div class="flex flex-col md:flex-row justify-between max-w-4xl mx-auto items-center space-y-2 md:space-y-0">
+            <p class="text-xs">COPYRIGHT @MANGAPAL 2025</p>
+            <div class="flex space-x-4">
+                <a href="#"><img src="images/twiitt.png" alt="Twitter" class="w-6 h-6 hover:scale-110"></a>
+                <a href="#"><img src="images/face.png" alt="Facebook" class="w-6 h-6 hover:scale-110"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram" class="w-6 h-6 hover:scale-110"></a>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

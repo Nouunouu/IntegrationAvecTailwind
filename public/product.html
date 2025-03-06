@@ -23,8 +23,9 @@
     <div class="flex flex-col min-h-screen w-full overflow-auto">
       <div class="relative w-full h-[1624px] overflow-hidden flex-shrink-0 bg-back">
         <!-- Logo -->
-        <div id="header"></div>
-
+        <a href="#" class="absolute top-4 left-48 w-[251px] h-20 text-4xl font-bold font-poppins bg-gradient-to-r from-white to-red-800 bg-clip-text text-transparent">
+          MangaPal
+        </a>
 
         <!-- Contenu de la page -->
         <span class="absolute top-48 left-[603px] text-5xl font-medium font-roboto-slab text-red-800">Nos Produits</span>
@@ -45,7 +46,12 @@
           <img alt="ouiarrowdown9235" src="external/ouiarrowdown9235-0lba.svg" class="absolute top-0 left-[77px] w-10 h-10" />
           <img alt="ouiarrowdown9236" src="external/ouiarrowdown9236-c09p.svg" class="absolute top-0 left-[45px] w-10 h-10" />
         </div>
-     
+        <div class="absolute top-8 left-[484px] flex gap-10 w-[774px] justify-between items-center">
+          <a class="text-red-800 text-xl font-medium font-poppins" href="Home.html">accueil</a>
+          <a class="text-red-800 text-xl font-medium font-poppins" href="product.html">Figurines</a>
+          <a class="text-red-800 text-xl font-medium font-poppins" href="#">Bibliothèque</a>
+          <a class="text-red-800 text-xl font-medium font-poppins" href="#">Contact</a>
+        </div>
         <div class="absolute top-[873px] left-[422px] w-[223px] h-[110px] flex items-start flex-shrink">
           <a href="produitdetails.html" class="text-white text-xl font-semibold font-poppins text-center hover:text-primary-color transition">
             Nendoroid Tanjiro Kamado
@@ -108,22 +114,6 @@
        
       </div>
     </div>
-    <div id="footer"></div>
 
-    <script>
-        // Fonction pour inclure un fichier HTML dans un élément
-        function includeHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                })
-                .catch(error => console.error(`Erreur de chargement du fichier ${file}:`, error));
-        }
-
-        includeHTML("header", "Header.html");
-        includeHTML("footer", "Footer.html");
-
-    </script>
   </body>
 </html>
